@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>program1</title>
+	<style>
+		body	{
+					font-family: Verdana, Arial, sans-serif;
+				
+				}
+	</style>
+</head>
+<body bgcolor=#FFFFED>
+    <h1>Price finding program</h1>
+	<form name="p1" action="/program1" onsubmit="return empty2(this)" method="post" required>
+	Please input the local address of the web store you want to find the price separetely
+	<br>
+	(Type 1 for Store 1, type 2 for Store 2, and type 3 for Store 3)
+	<br>
+	<input type="text" name="address">
+	<br>
+	Input the item name that you want to get the price
+    <div id="itemFields">
+        <input type="text" name="item_name[]">
+    </div>
+    <button type="button" onclick="addItemField()">Add another item</button>
+    <input type="submit" value="Run Program">
+</form>
+    <script>
+        function addItemField() {
+            var itemFields = document.getElementById('itemFields');
+            var newInput = document.createElement('input');
+            newInput.type = 'text';
+            newInput.name = 'item_name[]';
+            itemFields.appendChild(newInput);
+                                }
+        function empty2(passForm)    {
+            var temp = passForm.address.value;
+
+            if(temp ==""){
+                alert("You must enter something")
+                return false
+                }
+
+            }
+            
+    </script>
+</body>
+</html>

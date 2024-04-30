@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Index</title>
+	<style>
+		body	{
+					font-family: Verdana, Arial, sans-serif;
+					text-align:center;
+				
+				}
+		.top	{
+					position:absolute;
+					left:50%;
+					transform: translateX(-50%);
+		}
+		.mid	{
+					position: absolute;
+					top:250px;
+					left:50%;
+					transform: translateY(-50%);
+					transform: translateX(-50%);
+		}
+	</style>
+</head>
+<body bgcolor=#FFFFED>
+	<div class="top">
+
+		<h1>Welcome</h1>
+	</div>
+	<div class="mid">
+		This is our product
+		<br>
+		You can follow the installation handbook below to know how to use this product.	
+		<img src="{{url_for('static', filename='QR.png')}}" alt="welcome" width="200px" height="200px" />
+	</div>
+	
+</body>
+</html>
